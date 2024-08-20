@@ -22,10 +22,12 @@ model = LogisticRegression()
 
 fold = KFold(n_splits=10, shuffle = True)
 acc = cross_val_score(model, rescaled_X, Y, cv=fold, scoring = 'accuracy')
+print(acc)
+
 
 # 평균 구하기 1
-s = sum(acc)
-l = len(acc)
-avg = s / l
-
-print(s, l, avg)
+# s = sum(acc)
+# l = len(acc)
+# avg = s / l
+#
+# print(s, l, avg)
